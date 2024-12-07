@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "entregable_tfg_chatbot"
+version = "0.1.0"
+description = ""
+authors = ["Estela Madariaga <estelamadariagalasala@gmail.com>"]
+readme = "README.md"
+packages = [{include = "entregable_tfg_chatbot", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+chromadb = "^0.5.21"
+llama-index = "^0.12.2"
+llama-index-vector-stores-chroma = "^0.4.0"
+open-clip-torch = "^2.29.0"
+llama-index-embeddings-clip = "^0.3.0"
+numpy = "^1.8.5"
+llama-index-multi-modal-llms-ollama = "^0.4.0"
+matplotlib = "^3.9.3"
+llama-index-embeddings-cohere = "^0.4.0"
+llama-index-llms-ollama = "^0.4.2"
+gradio = "^5.8.0"
+llama-index-embeddings-nomic = "^0.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

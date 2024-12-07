@@ -1,0 +1,5 @@
+.env*
+store_zara_data*
+tests/
+women_txt_img_*
+*__pycache__

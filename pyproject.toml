@@ -20,6 +20,8 @@ llama-index-embeddings-cohere = "^0.4.0"
 llama-index-llms-ollama = "^0.4.2"
 gradio = "^5.8.0"
 llama-index-embeddings-nomic = "^0.6.0"
+openai-whisper = "^20240930"
+librosa = "^0.10.2.post1"
 
 [build-system]
 requires = ["poetry-core"]

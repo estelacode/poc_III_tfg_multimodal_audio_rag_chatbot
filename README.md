@@ -1,4 +1,4 @@
-# poc_llamaindex_chromadb
+# Entregable TFG Chatbot
 
 ### Create Environment 
 ```bash

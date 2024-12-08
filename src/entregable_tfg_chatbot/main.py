@@ -10,8 +10,14 @@ from llama_index.core.response_synthesizers import BaseSynthesizer
 from llama_index.core import get_response_synthesizer
 from llama_index.llms.ollama import Ollama
 from llama_index.core.schema import ImageNode
-
+from translate import Translator
+from transformers import Wav2Vec2ForCTC, Wav2Vec2Tokenizer, Wav2Vec2Processor
+import whisper
+import librosa
 import gradio as gr
+import librosa
+import torch
+
 
 _ = load_dotenv()
 
@@ -76,6 +82,27 @@ def multimodal_rag(index: MultiModalVectorStoreIndex, model:str ='llava:13b', k:
 
     return rag_engine
 
+def respond(audio_file):
+    query = speech_to_text(audio_file)
+    return rag_respond(query)
+
+def speech_to_text(audio_file):
+    
+  # Loading the audio file
+  audio, rate = librosa.load(audio_file)
+  
+  print(audio_file)
+  #printing audio
+  print(audio)
+  #printing rate
+  print(rate)
+  
+  ## WHISPER MODEL
+  #audio = whisper.load_audio(audio_file)  
+  model = whisper.load_model("base")
+  result = model.transcribe(audio, language = "English", temperature=0.0, fp16=False)
+  transcription = result["text"]
+  return 'User Question: ' +  transcription
 
 def rag_respond(query):
     global index
@@ -87,26 +114,29 @@ def rag_respond(query):
             img = n.node.metadata["file_path"]
         else:
             text = n.node.get_content()
-    return   gr.Textbox(response), gr.Image(img), gr.Textbox(text)
-
-def interface_chatbot():
-    demo = gr.Interface(
-    fn=rag_respond, 
-    title="Multimodal Chatbot",
-    inputs=[gr.Textbox()],   
-    outputs=[gr.Textbox(), gr.Image(), gr.Textbox()])
-    demo.launch(allowed_paths=['d:\\project_tfg\\pocs\\poc_llamaindex_chromadb\\data\\women_txt_img'])
+    return   gr.Textbox(query), gr.Textbox(response), gr.Image(img), gr.Textbox(text)
 
 
 if __name__ == "__main__":
    print('1/4. Ejecutando la etl')
-   etl_women('../../data/store_zara_data/store_zara.csv', '../../data/store_zara_data/images/zara/', '../../data/women_txt_img_tfg/', '../../data/shoes_woman_etl.csv')
+   #etl_women('../../data/store_zara_data/store_zara.csv', '../../data/store_zara_data/images/zara/', '../../data/women_txt_img_tfg/', '../../data/shoes_woman_etl.csv')
    print('2/4. Ejecutando la ingestion de datos multimodal')
    index = ingestion('../../data/women_txt_img/', '../../data/storage_women_dimensionlality_512/')
    print('3/4. Creación del motor de búsqueda multimodal')
    rag_engine = multimodal_rag(index)
    #rag_engine = multimodal_rag(index, model='llama3.2-vision:11b')
    print("4/4. Iniciando el chatbot")
-   interface_chatbot()
    
+   demo = gr.Interface(
+    fn = respond,
+    inputs = gr.Audio(
+        sources = ["upload", "microphone"], 
+        format= "wav", 
+        type="filepath"),
+    outputs=[gr.Textbox(), gr.Textbox(), gr.Image(), gr.Textbox()],
+    title = "chatbot",
+    description = "Multimodal Chatbot, inlcuding audio question mode"
+    )
+   
+   demo.launch(allowed_paths=['d:\\project_tfg\\pocs\\poc_llamaindex_chromadb\\data\\women_txt_img'])
    

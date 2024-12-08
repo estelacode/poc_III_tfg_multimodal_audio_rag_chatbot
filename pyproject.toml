@@ -22,6 +22,7 @@ gradio = "^5.8.0"
 llama-index-embeddings-nomic = "^0.6.0"
 openai-whisper = "^20240930"
 librosa = "^0.10.2.post1"
+translate = "^3.6.1"
 
 [build-system]
 requires = ["poetry-core"]

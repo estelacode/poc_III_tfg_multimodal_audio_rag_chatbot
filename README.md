@@ -8,7 +8,8 @@ A multimodal RAG (Retrieval-Augmented Generation) chatbot specialized in the fas
 The architecture leverages Chroma as a persistent multimodal vector database, Nomic for text embeddings, and OpenCLIP for image embeddings. Multimodal reasoning is performed using LLaVA 1.6 (7B/13B) and LLaMA 3.2 Vision (11B) served via Ollama. The application integrates an ETL pipeline for dataset preparation, a data ingestion pipeline for indexing, and an interactive Gradio-based user interface.
 
 ## Demo
-
+![Demo_PoC_III_Multimodal RAG Chatbot (text)](https://github.com/estelacode/entregable_tfg_chatbot/blob/main/demo/4.jpg)
+![Demo_PoC_III Multimodal RAG Chatbot (Audio)](https://github.com/estelacode/entregable_tfg_chatbot/blob/main/demo/10_audio_modality_heel_shoes.jpg)
 
 ## Features
 - Multimodal chatbot: supports text and audio input, and returns text + images
@@ -25,8 +26,10 @@ The architecture leverages Chroma as a persistent multimodal vector database, No
 - Interactive web UI built with Gradio
 
 ## Architecture
+![PoC_III High_level_Architecture_Diagram](https://github.com/estelacode/entregable_tfg_chatbot/blob/main/docs/diagrams/Poc_III_High_Level_Architecture_Diagram.jpg)
 
 ### `Sequence Diagram`
+![PoC_III_Sequence_Diagram](https://github.com/estelacode/entregable_tfg_chatbot/blob/main/docs/diagrams/PoC_III_Sequence_Diagram.png)
 
 #### Sequence Flow:
 1. User submits a query (text or audio) via the Frontend.
@@ -41,6 +44,47 @@ The architecture leverages Chroma as a persistent multimodal vector database, No
 10. Frontend displays the response (text and multiple images) to the user.
 
 ## Tech Stack
+
+`Backend`
+
+![Python](https://img.shields.io/badge/Python-black?style=for-the-badge&logo=python&logoColor=white)
+![3.12](https://img.shields.io/badge/3.12-CE6ACC?style=for-the-badge&logoColor=white)
+
+![LlamaIndex](https://img.shields.io/badge/LlamaIndex-black?style=for-the-badge&logo=llamaindex&logoColor=white)
+![0.12.2](https://img.shields.io/badge/0.12.2-CE6ACC?style=for-the-badge&logoColor=white)
+
+`Multimodal / Embeddings`
+
+![OpenCLIP](https://img.shields.io/badge/OpenCLIP-black?style=for-the-badge&logo=openai&logoColor=white)
+![2.29.0](https://img.shields.io/badge/2.29.0-CE6ACC?style=for-the-badge&logoColor=white)
+
+![Nomic-Embeddings](https://img.shields.io/badge/Nomic--Embeddings-black?style=for-the-badge&logoColor=white)
+![0.6.0](https://img.shields.io/badge/0.6.0-CE6ACC?style=for-the-badge&logoColor=white)
+
+![Cohere-Embeddings](https://img.shields.io/badge/Cohere--Embeddings-black?style=for-the-badge&logo=cohere&logoColor=white)
+![0.4.0](https://img.shields.io/badge/0.4.0-CE6ACC?style=for-the-badge&logoColor=white)
+
+`Vector Database`
+
+![ChromaDB](https://img.shields.io/badge/ChromaDB-black?style=for-the-badge&logoColor=white)
+![0.5.21](https://img.shields.io/badge/0.5.21-CE6ACC?style=for-the-badge&logoColor=white)
+
+`LLM`
+
+![Ollama](https://img.shields.io/badge/Ollama-black?style=for-the-badge&logo=ollama&logoColor=white)
+
+![LLaVA-13B](https://img.shields.io/badge/LLaVA--13B-CE6ACC?style=for-the-badge&logoColor=white)
+![Llama3.2-Vision](https://img.shields.io/badge/Llama3.2--Vision--11B-CE6ACC?style=for-the-badge&logoColor=white)
+
+`Frontend`
+
+![Gradio](https://img.shields.io/badge/Gradio-black?style=for-the-badge&logo=gradio&logoColor=white)
+![5.8.0](https://img.shields.io/badge/5.8.0-CE6ACC?style=for-the-badge&logoColor=white)
+
+`Infrastructure | Dev Tools`
+
+![Poetry](https://img.shields.io/badge/Poetry-black?style=for-the-badge&logo=python&logoColor=white)
+![Dependency-Management](https://img.shields.io/badge/Dependency--Management-CE6ACC?style=for-the-badge&logoColor=white)
 
 ## Setup
 ```bash

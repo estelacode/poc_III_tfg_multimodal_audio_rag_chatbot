@@ -1,0 +1,37 @@
+---
+config:
+  theme: redux
+---
+sequenceDiagram
+    participant U as User
+    participant F as Frontend (Gradio)
+    participant B as Backend
+    participant STT as Whisper (STT)
+    participant VS as Chroma (Vector Store)
+    participant E as Embeddings (Nomic / OpenCLIP)
+    participant LMM as Multimodal LLM (Ollama)
+
+    %% User interaction
+    U->>F: Submit query (text or audio)
+
+    %% Audio processing
+    alt Audio input
+        F->>STT: Transcribe audio
+        STT->>F: Return text
+    end
+
+    %% Backend processing
+    F->>B: Send query
+
+    %% Embedding + retrieval
+    B->>E: Generate query embeddings (text)
+    E->>VS: Semantic search
+    VS->>B: Return relevant docs (text + images)
+
+    %% LLM generation
+    B->>LMM: Query + retrieved context
+    LMM->>B: Generate multimodal response
+
+    %% Response
+    B->>F: Send response (text + images)
+    F->>U: Display results

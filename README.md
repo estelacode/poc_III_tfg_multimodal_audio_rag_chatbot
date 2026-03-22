@@ -48,43 +48,40 @@ The architecture leverages Chroma as a persistent multimodal vector database, No
 `Backend`
 
 ![Python](https://img.shields.io/badge/Python-black?style=for-the-badge&logo=python&logoColor=white)
-![3.12](https://img.shields.io/badge/3.12-CE6ACC?style=for-the-badge&logoColor=white)
+![3.12](https://img.shields.io/badge/3.12-D16133?style=for-the-badge&logoColor=white)
 
 ![LlamaIndex](https://img.shields.io/badge/LlamaIndex-black?style=for-the-badge&logo=llamaindex&logoColor=white)
-![0.12.2](https://img.shields.io/badge/0.12.2-CE6ACC?style=for-the-badge&logoColor=white)
+![0.12.2](https://img.shields.io/badge/0.12.2-D16133?style=for-the-badge&logoColor=white)
 
 `Multimodal / Embeddings`
 
 ![OpenCLIP](https://img.shields.io/badge/OpenCLIP-black?style=for-the-badge&logo=openai&logoColor=white)
-![2.29.0](https://img.shields.io/badge/2.29.0-CE6ACC?style=for-the-badge&logoColor=white)
+![2.29.0](https://img.shields.io/badge/2.29.0-D16133?style=for-the-badge&logoColor=white)
 
 ![Nomic-Embeddings](https://img.shields.io/badge/Nomic--Embeddings-black?style=for-the-badge&logoColor=white)
-![0.6.0](https://img.shields.io/badge/0.6.0-CE6ACC?style=for-the-badge&logoColor=white)
+![0.6.0](https://img.shields.io/badge/0.6.0-D16133?style=for-the-badge&logoColor=white)
 
 ![Cohere-Embeddings](https://img.shields.io/badge/Cohere--Embeddings-black?style=for-the-badge&logo=cohere&logoColor=white)
-![0.4.0](https://img.shields.io/badge/0.4.0-CE6ACC?style=for-the-badge&logoColor=white)
+![0.4.0](https://img.shields.io/badge/0.4.0-D16133?style=for-the-badge&logoColor=white)
 
 `Vector Database`
 
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-black?style=for-the-badge&logoColor=white)
-![0.5.21](https://img.shields.io/badge/0.5.21-CE6ACC?style=for-the-badge&logoColor=white)
+![0.5.21](https://img.shields.io/badge/0.5.21-D16133?style=for-the-badge&logoColor=white)
 
 `LLM`
 
-![Ollama](https://img.shields.io/badge/Ollama-black?style=for-the-badge&logo=ollama&logoColor=white)
-
-![LLaVA-13B](https://img.shields.io/badge/LLaVA--13B-CE6ACC?style=for-the-badge&logoColor=white)
-![Llama3.2-Vision](https://img.shields.io/badge/Llama3.2--Vision--11B-CE6ACC?style=for-the-badge&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-black?style=for-the-badge&logo=ollama&logoColor=white)![LLaVA-13B](https://img.shields.io/badge/LLaVA--13B-D16133?style=for-the-badge&logoColor=white)![Llama3.2-Vision](https://img.shields.io/badge/Llama3.2--Vision--11B-D16133?style=for-the-badge&logoColor=white)
 
 `Frontend`
 
 ![Gradio](https://img.shields.io/badge/Gradio-black?style=for-the-badge&logo=gradio&logoColor=white)
-![5.8.0](https://img.shields.io/badge/5.8.0-CE6ACC?style=for-the-badge&logoColor=white)
+![5.8.0](https://img.shields.io/badge/5.8.0-D16133?style=for-the-badge&logoColor=white)
 
 `Infrastructure | Dev Tools`
 
 ![Poetry](https://img.shields.io/badge/Poetry-black?style=for-the-badge&logo=python&logoColor=white)
-![Dependency-Management](https://img.shields.io/badge/Dependency--Management-CE6ACC?style=for-the-badge&logoColor=white)
+![Dependency-Management](https://img.shields.io/badge/Dependency--Management-D16133?style=for-the-badge&logoColor=white)
 
 ## Setup
 ```bash

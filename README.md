@@ -91,8 +91,8 @@ The architecture leverages Chroma as a persistent multimodal vector database, No
 poetry --version
 
 # 2. Clone the repository
-git clone https://github.com/estelacode/poc_tfg_chatbot_texto.git
-cd entregable_tfg_chatbot
+git clone https://github.com/estelacode/poc_III_tfg_multimodal_audio_rag_chatbot.git
+cd poc_III_tfg_multimodal_audio_rag_chatbot
 
 # 3. Select the Python interpreter for this project
 poetry env use /full/path/to/python

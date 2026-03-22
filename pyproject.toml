@@ -2,7 +2,7 @@
 name = "entregable_tfg_chatbot"
 version = "0.1.0"
 description = ""
-authors = ["Estela Madariaga <estelamadariagalasala@gmail.com>"]
+authors = ["Estela Madariaga"]
 readme = "README.md"
 packages = [{include = "entregable_tfg_chatbot", from = "src"}]
 

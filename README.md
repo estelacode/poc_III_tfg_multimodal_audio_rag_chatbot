@@ -110,9 +110,9 @@ poetry run python src/entregable_tfg_chatbot/main.py
 
 ## Project Structure
 ```bash
-ENTREGABLE_TFG_CHATBOT/
+poc_III_tfg_multimodal_audio_rag_chatbot/
 ├── data/                     # Data files
-├── demo_interface/           # Demo interface or media
+├── demo/                     # Demo interface or media
 ├── notebooks/                # Jupyter notebooks for experiments
 ├── src/                      # Source code 
 ├── vectorstore/              # Vector database storage 
